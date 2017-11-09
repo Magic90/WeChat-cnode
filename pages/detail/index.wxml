@@ -1,0 +1,31 @@
+<import src='/components/wxParse/wxParse.wxml' />
+<view class='container'>
+  <view class='content'>
+    <view class='title'>{{props.detail.data.title}}</view>
+    <view class='info'>
+      <view class='author'>{{props.detail.data.author.loginname}}</view>
+      <view class='time'>{{props.detail.data.create_at}}</view>
+    </view>
+    <template is='wxParse' data='{{wxParseData:props.detail.data.content.nodes}}' />
+  </view>
+  
+  <view class='reply'>
+    <block wx:if="{{props.detail.data.replies.length > 0}}" wx:for="{{props.detail.data.replies}}" wx:for-item='item' wx:key='{{index}}' wx:for-index='index'>
+      <view class='reply-item'>
+        <view class='info'>
+          <view class='author'>{{item.author.loginname}}</view>
+          <view>
+            <view class='comment'>
+              <i class='iconfont icon-thump'></i>
+              <span>{{item.ups.length}}</span>
+            </view>
+            <view class='time'>{{item.create_at}}</view>
+          </view>
+          
+        </view>
+        <template is='wxParse' data='{{wxParseData:item.content.nodes}}' />
+      </view>
+      
+    </block>
+  </view>
+</view>

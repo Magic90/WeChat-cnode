@@ -1,0 +1,79 @@
+@import '../../components/wxParse/wxParse.wxss'
+page{
+  background: #fafafa;
+}
+.container{
+  
+  height: 100%;
+}
+view{
+  overflow: inherit;
+}
+.content{
+  padding: 0 30rpx 20rpx;
+  font-size: 32rpx;
+}
+.reply{
+  background: #fff;
+  
+}
+.reply-item{
+  border-top: 1rpx solid #efefef;
+  padding: 20rpx 30rpx;
+  font-size: 32rpx;
+}
+.content .info{
+  font-size: 28rpx;
+  margin: 0 0 20rpx;
+}
+.content .title{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin: 20rpx 0 0;
+}
+.info{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+.author{
+  color: deepskyblue;
+}
+.wxParse-h1{
+  display: none;
+}
+.wxParse-img{
+  margin: 0 auto;
+}
+.wxParse-li-inner,.wxParse-li-text{
+  overflow: hidden;
+}
+.wxParse-li-inner .wxParse-li-text:first-child{
+  padding: 0 8rpx 0 0;
+}
+.wxParse-a{
+  color: #666;
+}
+.wxParse-table{
+  border-collapse:collapse;
+  border-top: 1px solid #e0e0e0;
+  margin: 20rpx 0;
+}
+.wxParse-table .wxParse-tr,.wxParse-table .wxParse-th{
+  border-top: none;
+}
+.wxParse-blockquote{
+  margin: 16rpx 0;
+}
+.wxParse-li-inner .wxParse-li-text .wxParse-inline:last-child{
+}
+.info view{
+  display: flex;
+}
+.iconfont{
+  color: #80b722;
+}
+.comment{
+  color: #80b722;
+  margin: 0 20rpx 0 0;
+}

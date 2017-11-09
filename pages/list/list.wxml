@@ -1,0 +1,26 @@
+<template name='List'>
+  <view class='tab-ctrl'>
+    <block wx:if="{{list.tabs.length > 0}}" wx:for="{{list.tabs}}" wx:key="index" wx:for-item="item" wx:for-index="index" >
+      <text data-index="{{index}}" class='{{list.index === index ? "active" : ""}}' bindtap='changeList' >{{item.tabName}}</text>
+    </block>
+  </view>
+  <view class='tab-con'>
+    <block wx:if="{{list.tabs[list.index].data.length > 0}}" wx:for="{{list.tabs[list.index].data}}"  wx:key="index" wx:for-item="item" wx:for-index="index">
+      <navigator url='/pages/detail/index?id={{item.id}}' class='item'>
+        <text class='title'>{{item.title}}</text>
+        <view class='info'>
+          <view>
+            <span class="{{item.tab === 'good' || item.top ? 'tab-name good' : 'tab-name'}}">{{item.top ? '置顶' : item.tab === 'share' ? '分享' : item.tab === 'job' ?  '招聘' : item.tab === 'ask' ? '问答' : '精华'}}</span>
+            <text class='author'>{{item.author.loginname}}</text>
+          </view>
+          <view>
+            <i class="iconfont icon-read"></i>
+            <span class='visit'>{{item.visit_count}}</span>
+            <i class="iconfont icon-comments"></i>
+            <span class='reply'>{{item.reply_count}}</span>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</template>

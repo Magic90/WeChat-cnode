@@ -1,0 +1,4 @@
+/**app.wxss**/
+@import "./style/font.wxss";
+@import "./style/reset.wxss";
+@import "./style/vco.wxss";

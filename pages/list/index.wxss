@@ -1,0 +1,57 @@
+.tab-ctrl{
+  display: flex;
+  height: 80rpx;
+  background: #444;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.tab-ctrl text{
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.tab-ctrl .active{
+  color: #80b722;
+}
+.tab-con{
+  margin: 80rpx 0 0;
+}
+.tab-con navigator{
+  border-bottom: 1rpx solid #ddd;
+  padding: 20rpx;
+}
+.tab-con .title{
+  font-size: 32rpx;
+}
+.tab-con .info{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  margin: 20rpx 0 0;
+  color: #a6a6a6;
+}
+.tab-con .tab-name{
+  font-size: 24rpx;
+  background: #dfdfdf;
+  padding: 6rpx 10rpx;
+  border-radius: 6rpx;
+  color: #333;
+  margin: 0 10rpx 0 0;
+}
+.tab-con .good{
+  background: #80b722;
+  color: #f6febe;
+}
+.tab-con .visit{
+  margin: 0 10rpx 0 0;
+}
+.tab-con .iconfont{
+  padding: 0 4px 0 0;
+  position: relative;
+  top: 4rpx;
+}
